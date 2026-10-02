@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Serene Skin</title>
+  <script>
+    const base = "/serene-skin";
+    const route = location.pathname.startsWith(base + "/")
+      ? location.pathname.slice(base.length) : "/";
+    location.replace(base + "/?__pages_path=" + encodeURIComponent(route + location.search + location.hash));
+  </script>
+</head>
+<body></body>
+</html>
